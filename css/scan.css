@@ -234,13 +234,99 @@ button.learn-more:hover {
   padding-bottom: 24px;
   padding-top: 24px;
 }
+/* ============================================================
+   📌 1024px — Small Laptops
+   ============================================================ */
+@media screen and (max-width: 1024px) {
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 24px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 25px 24px 8px;
+  }
+
+  .subtitle {
+    margin: 0 24px 22px;
+  }
+
+  .container {
+    padding: 0 24px 35px;
+    gap: 20px;
+  }
+
+  .card {
+    min-width: 300px;
+  }
+}
+
+
+/* ============================================================
+   📌 768px — Tablets
+   ============================================================ */
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .live-scan {
+    padding: 6px 12px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 22px 20px 8px;
+  }
+
+  .subtitle {
+    margin: 0 20px 20px;
+  }
+
+  .container {
+    padding: 0 20px 35px;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .upload-box {
+    padding: 30px 16px;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle::after {
+    font-size: 20px;
+  }
+}
+
+
+/* ============================================================
+   📌 576px — Large Phones
+   ============================================================ */
+@media screen and (max-width: 576px) {
+
   .navbar {
     flex-direction: column;
-    gap: 10px;
     align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
   }
 
   .nav-links {
@@ -248,21 +334,86 @@ button.learn-more:hover {
     gap: 10px;
   }
 
-  .container {
-    flex-direction: column;
-    padding: 0 20px 40px;
-  }
-
-  .card {
-    width: 100%;
-  }
-
   h1 {
-    margin: 30px 20px 8px;
-    font-size: 24px;
+    font-size: 22px;
+    margin: 20px 16px 8px;
   }
 
   .subtitle {
-    margin: 0 20px 20px;
+    font-size: 13px;
+    margin: 0 16px 18px;
+  }
+
+  .container {
+    padding: 0 16px 30px;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .upload-box {
+    padding: 28px 12px;
+  }
+
+  .file-btn,
+  .upload-box button {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+
+  .badge-btn {
+    width: 100%;
+  }
+
+  button.learn-more {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 11px;
   }
 }
+
+
+/* ============================================================
+   📌 430px — Small Phones (iPhone SE, iPhone Mini)
+   ============================================================ */
+@media screen and (max-width: 430px) {
+
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .section-title {
+    font-size: 15px;
+  }
+
+  .trace,
+  .metadata {
+    font-size: 13px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle::after {
+    font-size: 18px;
+  }
+}
+

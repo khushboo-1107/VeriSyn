@@ -1,0 +1,188 @@
+/* ---------- Global Page Styling ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #0a1b2b, #020710);
+    color: #d7e9ff;
+    overflow-x: hidden;
+}
+
+/* ---------- Top Navigation (Home Button) ---------- */
+.top-nav {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+}
+
+.top-nav a {
+    color: #c9d6e3;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #29a8ff; /* neon hover */
+}
+
+/* ---------- Wrapper ---------- */
+.features-wrapper {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* ---------- Heading / Subheading ---------- */
+.features-wrapper h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #00c6ff;      /* Forgot password SAME color */
+    margin-bottom: 10px;
+}
+
+.features-wrapper p {
+    font-size: 16px;
+    color: #b4c3d4;      /* Same subheading color */
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* ---------- Features Grid ---------- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ---------- Feature Card ---------- */
+.feature-card {
+    padding: 25px;
+    background: rgba(10, 20, 35, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transition: 0.35s ease;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #7cd6ff;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #b4c3d4;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ---------- Hover Effects ---------- */
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+    background: rgba(10, 20, 35, 0.55);
+}
+/* ===========================
+      RESPONSIVE MEDIA QUERIES
+   =========================== */
+
+/* ---------- Large Tablets (max 1024px) ---------- */
+@media (max-width: 1024px) {
+    .features-wrapper h1 {
+        font-size: 36px;
+    }
+
+    .features-wrapper p {
+        font-size: 15px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+}
+
+/* ---------- Tablets / Landscape Mobiles (max 768px) ---------- */
+@media (max-width: 768px) {
+    .top-nav {
+        top: 18px;
+        right: 20px;
+    }
+
+    .top-nav a {
+        font-size: 15px;
+    }
+
+    .features-wrapper {
+        padding: 60px 15px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .features-wrapper p {
+        font-size: 14px;
+        max-width: 550px;
+    }
+
+    .features-grid {
+        gap: 25px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* ---------- Mobile (max 576px) ---------- */
+@media (max-width: 576px) {
+    .top-nav {
+        top: 15px;
+        right: 15px;
+    }
+
+    .top-nav a {
+        font-size: 14px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 28px;
+    }
+
+    .features-wrapper p {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+}
+
+/* ---------- Small Phones (max 400px) ---------- */
+@media (max-width: 400px) {
+    .top-nav a {
+        font-size: 13px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+}

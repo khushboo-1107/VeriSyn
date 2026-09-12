@@ -1,48 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verisyn - Protect Digital Content</title>
-  <link rel="stylesheet" href="css/landing_page.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VeriSyn — Securing the Digital Future</title>
+
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/landing_page.css">
 </head>
 <body>
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-dot" aria-hidden="true"></div>
+        <span class="brand-text">VeriSyn</span>
+      </div>
 
-  <!-- ===== Header / Navbar ===== -->
-  <div class="header">
-    <h1>Verisyn</h1>
-    <div class="auth-buttons">
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="feature.html" class="nav-link">Features</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+    <a class="link-btn" href="login.html">Login</a>
+    <a class="btn btn-primary" href="signup.html">Sign Up</a>
+
+    <button id="mobileToggle" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</div>
+
     </div>
-  </div>
+  </header>
 
-  <!-- ===== Hero Section ===== -->
-  <section class="hero">
-    <h2><span>Verisyn</span> — Protect & Verify<br>Your Digital Content</h2>
-    <p>
-      Two powerful tools — <strong>CrypTure</strong> & <strong>Deepfake Shield</strong> — for image & video authenticity, privacy and integrity.
-    </p>
-  </section>
+  <!-- MAIN -->
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="pill">AI-Powered Security</div>
 
-  <!-- ===== Feature Cards ===== -->
-  <section class="feature-section">
+          <h1 class="hero-title">
+            Securing the <span class="accent">Digital Future</span><br/>with AI
+          </h1>
 
-    <div class="feature-card green">
-      <h3>CrypTure</h3>
-      <p>Encrypt, watermark, and authenticate your images with privacy-first controls.</p>
-      <a href="upload.html">Go to CrypTure →</a>
-    </div>
+          <p class="hero-sub">
+            VeriSyn brings you cutting-edge tools to detect and protect — from deepfakes to data leaks.
+            Harness the power of advanced AI to secure your digital assets.
+          </p>
 
-    <div class="feature-card red">
-      <h3>Deepfake Shield</h3>
-      <p>Detect manipulations and verify video integrity with advanced AI checks.</p>
-      <a href="home.html">Go to Deepfake Shield →</a>
-    </div>
+          <div class="hero-cta">
+            <a class="btn btn-ghost" href="home.html">Explore Deepfake Shield </a>
+            <a class="btn btn-green" href="upload.html">Explore CrypTure </a>
+          </div>
 
-  </section>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-value">99.8%</div>
+              <div class="stat-label">Detection Accuracy</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value green">256–bit</div>
+              <div class="stat-label">Encryption</div>
+            </div>
+          </div>
+        </div>
 
-  <script src = "/js/landing_page.js"></script>
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock">
+            <!-- animated background rings -->
+            <div class="rings">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+            </div>
+
+            <!-- shield svg -->
+            <svg class="shield" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#22d07a"/>
+                  <stop offset="1" stop-color="#ff7a2d"/>
+                </linearGradient>
+                <filter id="ds" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000" flood-opacity="0.5"/>
+                </filter>
+              </defs>
+
+              <g filter="url(#ds)">
+                <circle cx="120" cy="86" r="60" fill="#0b2833" opacity="0.98"/>
+                <path d="M120 36c34 0 60 20 60 60 0 68-60 92-60 92s-60-24-60-92c0-40 26-60 60-60z"
+                      fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M95 106c6 12 18 20 25 20s19-8 25-20" fill="none" stroke="#bfe8d2" stroke-width="6" stroke-linecap="round"/>
+              </g>
+            </svg>
+
+            <div class="lock-badge">🔒</div>
+            <div class="device-bottom-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+      <div class="container features-inner">
+        <h2 class="section-title">Advanced Protection Features</h2>
+        <p class="section-sub">Cutting-edge AI technology designed to protect your digital assets</p>
+
+        <div class="cards-grid">
+          <article class="card card-orange">
+            <div class="card-top">
+              <div class="card-icon">🛡️</div>
+            </div>
+            <h3>Deepfake Shield</h3>
+            <p>Detect and verify media authenticity with our advanced AI. Protect against synthetic content and maintain trust in your digital communications.</p>
+          </article>
+
+          <article class="card card-green">
+            <div class="card-top">
+              <div class="card-icon">🔐</div>
+            </div>
+            <h3>CrypTure</h3>
+            <p>Secure and encrypt your digital assets with next-generation cryptography. Military-grade protection for your most sensitive data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Ready to Secure Your Digital Future?</h2>
+        <p>Join thousands of organizations trusting VeriSyn for advanced security and threat detection.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary large" href="#">Get Started Today →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div class="f-col">
+          <div class="brand-small"><div class="logo-dot small"></div><span class="brand-text">VeriSyn</span></div>
+          <p class="muted">AI-powered digital security platform</p>
+        </div>
+
+        <div class="f-col">
+          <h4>Product</h4>
+          <a href="#">Deepfake Shield</a>
+          <a href="#">CrypTure</a>
+        </div>
+
+        <div class="f-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="f-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        © <span id="year"></span> VeriSyn. All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/landing_page.js"></script>
 </body>
 </html>

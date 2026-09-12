@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0b1220;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background-color: #0b1220;
+    border-bottom: 1px solid #1b2436;
+    align-items: center;
+} */
+
+/* NAVBAR */
+
+/* ---------- Top Navigation (Home Button) ---------- */
+.top-nav {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+}
+
+.top-nav a {
+    color: #5a9ee2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #0764a1; /* neon hover */
+}
+
+
+
+
+/* ABOUT SECTION */
+.about-container {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.title span {
+    color: #a78bfa;
+}
+
+.about-text {
+    margin-top: 15px;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #d4d7e3;
+}
+
+.sub-heading {
+    margin-top: 40px;
+    font-size: 26px;
+    color: #b497ff;
+}
+
+/* MODULE BOXES */
+.module {
+    background-color: #111a2e;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid #222c45;
+}
+
+.module h3 {
+    color: #a78bfa;
+}
+
+.module ul {
+    margin-left: 20px;
+}
+
+.module ul li {
+    margin-bottom: 10px;
+    color: #cbd1e1;
+}
+
+/* Final message */
+.final-line {
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #cfc8ff;
+    font-weight: 500;
+}

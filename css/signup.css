@@ -1,135 +1,152 @@
-/* ===== Root Theme Variables ===== */
-:root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --input-bg: #334155;
-  --text-color: #f1f5f9;
-  --primary: #38bdf8;
-  --primary-hover: #0ea5e9;
-  --footer-bg: #111827;
-  --font-main: 'Inter', sans-serif;
-}
+/* REUSE SAME DESIGN LANGUAGE (consistency) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* ===== Base Styles ===== */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
   height: 100vh;
+  background: linear-gradient(130deg, #0f172a, #1e293b, #0f172a);
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: var(--bg-color);
-  font-family: var(--font-main);
-  color: var(--text-color);
+  align-items: center;
 }
 
-/* ===== Signup Container ===== */
-.signup-container {
-  background: var(--card-bg);
-  padding: 30px 40px;
-  border-radius: 16px;
-  width: 380px;
-  max-width: 90%;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+/* NAVBAR */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background-color: #0b1220;
+    border-bottom: 1px solid #1b2436;
+    align-items: center;
+} */
+
+/* NAVBAR */
+
+/* ---------- Top Navigation (Home Button) ---------- */
+.top-nav {
+    position: absolute;
+    top: 22px;
+    right: 35px;
 }
 
-.signup-container h1 {
+.top-nav a {
+    color: #5a9ee2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #0764a1; /* neon hover */
+}
+
+
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-card {
+  width: 400px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 25px rgba(0,255,200,0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+h2 {
   text-align: center;
-  margin-bottom: 25px;
-  color: var(--primary);
+  color: #38bdf8;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
-/* ===== Form Fields ===== */
+.subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
 .field {
   margin-bottom: 18px;
-  display: flex;
-  flex-direction: column;
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 6px;
   color: #cbd5e1;
+  margin-bottom: 6px;
+  display: block;
 }
 
 input {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: var(--input-bg);
-  color: var(--text-color);
-  font-size: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 10px;
 }
 
 input:focus {
-  outline: 2px solid var(--primary);
+  border-color: #38bdf8;
+  outline: none;
 }
 
-/* ===== Submit Button ===== */
-button {
+.btn {
   width: 100%;
   padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
   color: white;
-  font-size: 16px;
-  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: opacity 0.3s ease;
+  margin-top: 5px;
 }
 
-button:hover {
+.btn:hover {
   opacity: 0.9;
 }
 
-/* ===== Message ===== */
 #message {
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 10px;
   text-align: center;
   color: #f87171;
 }
 
-/* ===== Footer Section ===== */
-.footer {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: var(--footer-bg);
+.switch {
+  margin-top: 15px;
   text-align: center;
-  border-top: 1px solid #2e2e38;
 }
 
-.footer-back-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #6366f1;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 8px;
+.switch a {
+  color: #38bdf8;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: bold;
 }
 
-.footer-back-button:hover {
-  background-color: #4f46e5;
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Responsive Adjustments ===== */
+/* Mobile responsive */
 @media (max-width: 480px) {
-  .signup-container {
-    padding: 25px 20px;
-    width: 90%;
-  }
-
-  button {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .footer-back-button {
-    font-size: 14px;
-    padding: 10px 20px;
+  .glass-card {
+    width: 95%;
+    padding: 25px;
   }
 }

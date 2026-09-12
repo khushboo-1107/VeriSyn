@@ -1,75 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sign Up</title>
-
-  <link rel="stylesheet" href="css/signup.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriSyn Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 
 <body>
 
-  <div class="signup-container">
+    <!-- NAVBAR -->
 
-    <h1>Create Account</h1>
+    <!-- TOP RIGHT HOME -->
+    <div class="top-nav">
+        <a href="index.html">Home</a>
+    </div>
 
-    <form id="signupForm">
+    <div class="wrapper">
+        <div class="glass-card">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join VeriSyn — Security meets Trust</p>
 
-      <div class="field">
+            <form id="signupForm">
 
-        <label for="username">Username</label>
+                <div class="field">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Choose a username" required>
+                </div>
 
-        <input type="text" id="username" required>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
 
-      </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Create password" required>
+                </div>
 
-      <div class="field">
+                <div class="field">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+                </div>
 
-        <label for="email">Email</label>
+                <button type="submit" class="btn">Sign Up</button>
+                <p id="message"></p>
 
-        <input type="email" id="email" required>
+            </form>
 
-      </div>
-
-      <div class="field">
-
-        <label for="password">Password</label>
-
-        <input type="password" id="password" required>
-
-      </div>
-
-      <div class="field">
-
-        <label for="confirmPassword">Confirm Password</label>
-
-        <input type="password" id="confirmPassword" required>
-
-      </div>
-
-      <button type="submit">Sign Up</button>
-
-      <p id="message"></p>
-
-    </form>
-
-    <footer class="footer">
-  <a href="index.html" class="footer-back-button"> Verisyn </a>
-</footer>
-
-  </div>
-
-  
-
-
-  <script src="js/signup.js"></script>
+            <p class="switch">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
 
 </body>
 
